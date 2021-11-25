@@ -44,6 +44,7 @@ jobs:
       uses: github/codeql-action/analyze@v1
       with:
         output: sarif-results
+        wait-for-processing: true
         
     - name: Upload loc as a Build Artifact
       uses: actions/upload-artifact@v2.2.0
