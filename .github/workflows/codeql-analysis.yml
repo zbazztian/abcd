@@ -32,6 +32,7 @@ jobs:
       uses: github/codeql-action/init@v1
       with:
         languages: ${{ matrix.language }}
+        debug: true
 
     - name: Autobuild
       uses: github/codeql-action/autobuild@v1
@@ -44,7 +45,7 @@ jobs:
       uses: github/codeql-action/analyze@v1
       with:
         output: sarif-results
-        
+
     - name: Upload loc as a Build Artifact
       uses: actions/upload-artifact@v2.2.0
       with:
