@@ -29,10 +29,9 @@ jobs:
 
 
     - run: |
-       file .
-       gunzip --version
-       curl -L "https://github.com/github/codeql-action/releases/download/codeql-bundle-20211122/codeql-bundle-win64.tar.gz" > codeql-bundle-win64.tar.gz
-       file codeql-bundle-win64.tar.gz
-       tar xf codeql-bundle-win64.tar.gz
+       curl -o codeql.tar.gz -L "https://github.com/github/codeql-action/releases/download/codeql-bundle-20211122/codeql-bundle-win64.tar.gz"
+       file codeql.tar.gz
+       gunzip codeql.tar.gz
+       tar xf codeql.tar
        ./codeql/codeql.exe version
 
