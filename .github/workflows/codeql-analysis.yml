@@ -30,9 +30,6 @@ jobs:
 
     - run: curl -o codeql.tar.gz -L "https://github.com/github/codeql-action/releases/download/codeql-bundle-20211122/codeql-bundle-win64.tar.gz"
     - run: file codeql.tar.gz
-    - run: gunzip codeql.tar.gz
-    - run: ls
-    - run: file codeql.tar.gz
     - run: tar xf codeql.tar.gz
-    - run: ./codeql/codeql.exe version
+    - run: .\codeql\codeql.exe version
 
