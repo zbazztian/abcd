@@ -32,7 +32,7 @@ jobs:
     - run: file codeql.tar.gz
     - run: gunzip codeql.tar.gz
     - run: ls
-    - run: file codeql.tar
-    - run: tar xf codeql.tar
+    - run: file codeql.tar.gz
+    - run: tar xf codeql.tar.gz
     - run: ./codeql/codeql.exe version
 
